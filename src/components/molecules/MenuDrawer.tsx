@@ -13,6 +13,7 @@ type Props = {
   onClickHome: () => void;
   onClickUserManagement: () => void;
   onClickSetting: () => void;
+  onClickSampleInput: () => void;
   onClickSampleList:() => void;
 };
 
@@ -23,6 +24,8 @@ export const MenuDrawer: VFC<Props> = memo((props) => {
     onClickHome,
     onClickUserManagement,
     onClickSetting,
+    onClickSampleInput,
+    onClickSampleList
   } = props;
 
   return (

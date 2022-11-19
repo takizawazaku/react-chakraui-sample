@@ -57,13 +57,13 @@ export const Header: VFC = memo(() => {
           <Box pr={4}>
             <Link onClick={onClickUserManagement}>ユーザー一覧</Link>
           </Box>
-          <Box>
+          <Box pr={4}>
             <Link onClick={onClickSetting}>設定</Link>
           </Box>
-          <Box>
+          <Box pr={4}>
             <Link onClick={onClickSampleInput}>入力系サンプル</Link>
           </Box>
-          <Box>
+          <Box pr={4}>
             <Link onClick={onClickSampleList}>一覧系サンプル</Link>
           </Box>
         </Flex>
