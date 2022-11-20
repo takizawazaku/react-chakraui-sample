@@ -1,4 +1,5 @@
 import { Home } from "../components/pages/home/Home";
+import { SampleEtc } from "../components/pages/home/SampleEtc";
 import { SampleInput } from "../components/pages/home/SampleInput";
 import { SampleList } from "../components/pages/home/SampleList";
 import { Setting } from "../components/pages/home/Setting";
@@ -30,6 +31,11 @@ export const homeRoutes = [
     path: "/sample_list",
     exact: false,
     children: <SampleList />,
+  },
+  {
+    path: "/sample_etc",
+    exact: false,
+    children: <SampleEtc />,
   },
   {
     path: "",

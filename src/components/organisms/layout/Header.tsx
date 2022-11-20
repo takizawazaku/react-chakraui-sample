@@ -24,6 +24,10 @@ export const Header: VFC = memo(() => {
     () => history.push("/home/sample_list"),
     []
   );
+  const onClickSampleEtc = useCallback(
+    () => history.push("/home/sample_etc"),
+    []
+  );
 
   const onClickSetting = useCallback(() => history.push("/home/setting"), []);
 
@@ -66,6 +70,9 @@ export const Header: VFC = memo(() => {
           <Box pr={4}>
             <Link onClick={onClickSampleList}>一覧系サンプル</Link>
           </Box>
+          <Box pr={4}>
+            <Link onClick={onClickSampleEtc}>その他サンプル</Link>
+          </Box>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
@@ -77,6 +84,7 @@ export const Header: VFC = memo(() => {
         onClickSetting={onClickSetting}
         onClickSampleInput={onClickSampleInput}
         onClickSampleList={onClickSampleList}
+        onClickSampleEtc={onClickSampleEtc}
       />
     </>
   );
