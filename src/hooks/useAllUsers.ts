@@ -17,7 +17,11 @@ export const useAllUsers = () => {
       .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
       .then((res) => setUsers(res.data))
       .catch(() =>
-        showMessage({ title: "ユーザー取得に失敗しました", status: "error" })
+        showMessage({
+          title: "ユーザー取得に失敗しました",
+          status: "error",
+          variant: "left-accent",
+        })
       )
       .finally(() => setLoading(false));
   }, []);

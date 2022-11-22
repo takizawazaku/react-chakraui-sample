@@ -6,7 +6,11 @@ import { PrimaryButton } from "../../atoms/button/PrimaryButton";
 export const SampleEtc: VFC = memo(() => {
   const { showMessage } = useMessage();
   const onClickToast = () => {
-    showMessage({ title: "aaaa", status: "info" });
+    showMessage({
+      title: "トーストテスト",
+      status: "info",
+      variant: "top-accent",
+    });
   };
 
   return (

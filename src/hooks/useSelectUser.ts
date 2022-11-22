@@ -20,7 +20,11 @@ export const useSelectUser = () => {
     const { id, users, onOpen } = props;
     const targetUser = users.find((obj) => obj.id === id);
     if (!targetUser) {
-      showMessage({ title: "ユーザーが見つかりません", status: "error" });
+      showMessage({
+        title: "ユーザーが見つかりません",
+        status: "error",
+        variant: "left-accent",
+      });
       return;
     } else {
       setSelectedUser(targetUser);

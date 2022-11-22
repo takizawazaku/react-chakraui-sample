@@ -23,15 +23,27 @@ export const useAuth = () => {
           // サンプル的にidが10のユーザーを管理者としてみる
           const isAdmin = res.data.id === 10 ? true : false;
           setLoginUser({ ...res.data, isAdmin });
-          showMessage({ title: "ログインしました", status: "success" });
+          showMessage({
+            title: "ログインしました",
+            status: "success",
+            variant: "left-accent",
+          });
           history.push("/home");
         } else {
-          showMessage({ title: "ユーザーが見つかりません", status: "error" });
+          showMessage({
+            title: "ユーザーが見つかりません",
+            status: "error",
+            variant: "left-accent",
+          });
           setLoading(false);
         }
       })
       .catch(() => {
-        showMessage({ title: "ユーザーが見つかりません", status: "error" });
+        showMessage({
+          title: "ユーザーが見つかりません",
+          status: "error",
+          variant: "left-accent",
+        });
         setLoading(false);
       });
   }, []);
