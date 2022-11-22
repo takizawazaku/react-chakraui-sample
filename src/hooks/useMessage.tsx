@@ -16,7 +16,7 @@ export const useMessage = () => {
     toast({
       title,
       status,
-      variant: variant,
+      variant,
       position: "top",
       duration: 2000,
       isClosable: true,
