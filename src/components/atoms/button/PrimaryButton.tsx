@@ -6,7 +6,7 @@ type Props = {
   isFullWidth?: boolean;
   disabled?: boolean;
   isLoading?: boolean;
-  colorScheme:
+  colorScheme?:
     | "blue"
     | "cyan"
     | "gray"
