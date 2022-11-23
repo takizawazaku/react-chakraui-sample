@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { useMessage } from "../../../hooks/useMessage";
 import { PrimaryButton } from "../../atoms/button/PrimaryButton";
@@ -34,18 +34,42 @@ export const SampleEtc: VFC = memo(() => {
 
   return (
     <>
-      <PrimaryButton onClick={() => onClickToast("info")}>
-        トースト表示(info)
-      </PrimaryButton>
-      <PrimaryButton onClick={() => onClickToast("warning")}>
-        トースト表示(warning)
-      </PrimaryButton>
-      <PrimaryButton onClick={() => onClickToast("success")}>
-        トースト表示(success)
-      </PrimaryButton>
-      <PrimaryButton onClick={() => onClickToast("error")}>
-        トースト表示(error)
-      </PrimaryButton>
+      <Stack direction="column">
+        <Wrap spacing={4}>
+          <WrapItem>
+            <PrimaryButton
+              colorScheme="blue"
+              onClick={() => onClickToast("info")}
+            >
+              トースト表示(info)
+            </PrimaryButton>
+          </WrapItem>
+          <WrapItem>
+            <PrimaryButton
+              colorScheme="orange"
+              onClick={() => onClickToast("warning")}
+            >
+              トースト表示(warning)
+            </PrimaryButton>
+          </WrapItem>
+          <WrapItem>
+            <PrimaryButton
+              colorScheme="green"
+              onClick={() => onClickToast("success")}
+            >
+              トースト表示(success)
+            </PrimaryButton>
+          </WrapItem>
+          <WrapItem>
+            <PrimaryButton
+              colorScheme="red"
+              onClick={() => onClickToast("error")}
+            >
+              トースト表示(error)
+            </PrimaryButton>
+          </WrapItem>
+        </Wrap>
+      </Stack>
     </>
   );
 });
