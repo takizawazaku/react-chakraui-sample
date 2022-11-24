@@ -32,7 +32,6 @@ export const Login: VFC = memo(() => {
             isFullWidth
             disabled={userId === ""}
             isLoading={loading}
-            colorScheme="teal"
             onClick={onClickLogin}
           >
             ログイン

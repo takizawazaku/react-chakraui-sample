@@ -105,9 +105,7 @@ export const UserDetailModal: VFC<Props> = memo((props) => {
         </ModalBody>
         {isAdmin && (
           <ModalFooter>
-            <PrimaryButton colorScheme="teal" onClick={onClickUpdate}>
-              更新
-            </PrimaryButton>
+            <PrimaryButton onClick={onClickUpdate}>更新</PrimaryButton>
           </ModalFooter>
         )}
       </ModalContent>
