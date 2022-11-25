@@ -1,6 +1,7 @@
-import { Wrap, WrapItem } from "@chakra-ui/react";
+import { Center, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { useMessage } from "../../../hooks/useMessage";
+import { AlertDialogButton } from "../../atoms/button/AlertDialogButton";
 import { PrimaryButton } from "../../atoms/button/PrimaryButton";
 
 export const SampleEtc: VFC = memo(() => {
@@ -34,6 +35,14 @@ export const SampleEtc: VFC = memo(() => {
 
   return (
     <>
+      <Center fontSize={20}>雑に試します</Center>
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <AlertDialogButton />
+        </WrapItem>
+      </Wrap>
+
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <PrimaryButton onClick={() => onClickToast("info")}>
