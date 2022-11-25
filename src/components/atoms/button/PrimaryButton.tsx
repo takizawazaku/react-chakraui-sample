@@ -7,6 +7,7 @@ type Props = {
   disabled?: boolean;
   isLoading?: boolean;
   onClick: () => void;
+  bg?: string;
 };
 
 export const PrimaryButton: VFC<Props> = (props) => {
@@ -16,11 +17,12 @@ export const PrimaryButton: VFC<Props> = (props) => {
     disabled = false,
     isLoading = false,
     onClick,
+    bg = "blue.400",
   } = props;
 
   return (
     <Button
-      bg="blue.400"
+      bg={bg}
       color="white"
       isFullWidth={isFullWidth}
       disabled={disabled || isLoading}
