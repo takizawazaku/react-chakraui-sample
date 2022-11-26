@@ -10,6 +10,9 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
+// 公式
+// https://chakra-ui.com/docs/components/alert-dialog/usage
+
 export const AlertDialogButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);

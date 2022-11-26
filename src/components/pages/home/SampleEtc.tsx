@@ -43,6 +43,7 @@ export const SampleEtc: VFC = memo(() => {
         </WrapItem>
       </Wrap>
 
+      {/* https://chakra-ui.com/docs/components/toast/usage */}
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <PrimaryButton onClick={() => onClickToast("info")}>
