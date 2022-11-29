@@ -3,6 +3,8 @@ import { memo, VFC } from "react";
 import { useMessage } from "../../../hooks/useMessage";
 import { AlertDialogButton } from "../../atoms/button/AlertDialogButton";
 import { PrimaryButton } from "../../atoms/button/PrimaryButton";
+import { CheckboxGroup } from "../../atoms/formControl/CheckboxGroup";
+import { ErrorMessageExample } from "../../atoms/formControl/ErrorMessageExample";
 
 export const SampleEtc: VFC = memo(() => {
   // コンポーネントは後でバラすべきか？
@@ -70,6 +72,18 @@ export const SampleEtc: VFC = memo(() => {
           <PrimaryButton bg={"red.400"} onClick={() => onClickToast("error")}>
             トースト表示(error)
           </PrimaryButton>
+        </WrapItem>
+      </Wrap>
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <CheckboxGroup />
+        </WrapItem>
+      </Wrap>
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <ErrorMessageExample />
         </WrapItem>
       </Wrap>
     </>
