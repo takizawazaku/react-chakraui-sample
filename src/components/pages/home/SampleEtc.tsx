@@ -5,6 +5,8 @@ import { AlertDialogButton } from "../../atoms/button/AlertDialogButton";
 import { PrimaryButton } from "../../atoms/button/PrimaryButton";
 import { CheckboxGroup } from "../../atoms/formControl/CheckboxGroup";
 import { ErrorMessageExample } from "../../atoms/formControl/ErrorMessageExample";
+import { MakingFieldRequired } from "../../atoms/formControl/MakingFieldRequired";
+import { SelectExample } from "../../atoms/formControl/SelectExample";
 
 export const SampleEtc: VFC = memo(() => {
   // コンポーネントは後でバラすべきか？
@@ -84,6 +86,18 @@ export const SampleEtc: VFC = memo(() => {
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <ErrorMessageExample />
+        </WrapItem>
+      </Wrap>
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <MakingFieldRequired />
+        </WrapItem>
+      </Wrap>
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <SelectExample />
         </WrapItem>
       </Wrap>
     </>
