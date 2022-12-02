@@ -1,12 +1,16 @@
-import { Center, Wrap, WrapItem } from "@chakra-ui/react";
+import { Center, Divider, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { useMessage } from "../../../hooks/useMessage";
+import { BadgeSample } from "../../atoms/badge/BadgeSample";
+import { BreadCrumbSample } from "../../atoms/breadcrumb/BreadCrumbSample";
 import { AlertDialogButton } from "../../atoms/button/AlertDialogButton";
 import { PrimaryButton } from "../../atoms/button/PrimaryButton";
 import { CheckboxGroup } from "../../atoms/formControl/CheckboxGroup";
 import { ErrorMessageExample } from "../../atoms/formControl/ErrorMessageExample";
 import { MakingFieldRequired } from "../../atoms/formControl/MakingFieldRequired";
+import { NumberInputExample } from "../../atoms/formControl/NumberInputExample";
 import { SelectExample } from "../../atoms/formControl/SelectExample";
+import { SlideTransitionSample } from "../../atoms/Transitions/SlideTransitionSample";
 
 export const SampleEtc: VFC = memo(() => {
   // コンポーネントは後でバラすべきか？
@@ -39,6 +43,7 @@ export const SampleEtc: VFC = memo(() => {
 
   return (
     <>
+      <BreadCrumbSample />
       <Center fontSize={20}>雑に試します</Center>
 
       <Wrap p={{ base: 4, md: 10 }}>
@@ -46,6 +51,8 @@ export const SampleEtc: VFC = memo(() => {
           <AlertDialogButton />
         </WrapItem>
       </Wrap>
+
+      <Divider />
 
       {/* https://chakra-ui.com/docs/components/toast/usage */}
       <Wrap p={{ base: 4, md: 10 }}>
@@ -77,11 +84,15 @@ export const SampleEtc: VFC = memo(() => {
         </WrapItem>
       </Wrap>
 
+      <Divider />
+
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <CheckboxGroup />
         </WrapItem>
       </Wrap>
+
+      <Divider />
 
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
@@ -89,15 +100,43 @@ export const SampleEtc: VFC = memo(() => {
         </WrapItem>
       </Wrap>
 
+      <Divider />
+
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <MakingFieldRequired />
         </WrapItem>
       </Wrap>
 
+      <Divider />
+
       <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
           <SelectExample />
+        </WrapItem>
+      </Wrap>
+
+      <Divider />
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <NumberInputExample />
+        </WrapItem>
+      </Wrap>
+
+      <Divider />
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <BadgeSample />
+        </WrapItem>
+      </Wrap>
+
+      <Divider />
+
+      <Wrap p={{ base: 4, md: 10 }}>
+        <WrapItem>
+          <SlideTransitionSample />
         </WrapItem>
       </Wrap>
     </>
